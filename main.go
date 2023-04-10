@@ -56,12 +56,20 @@ func main() {
 		}
 	}
 	if b == true {
-		fmt.Println("Your card is in out database!")
+		fmt.Println("Your card is in our database!")
+		fmt.Println(humoMap)
 	} else {
 		fmt.Println("Your card is not in our database")
-		cardList1 = append(cardList1, input)
-		fmt.Println("Your card was added in our database,successfully ")
-		fmt.Println(cardList1)
+		if input[0] >= 53 {
+			humoMap[input] = "HUMO"
+			fmt.Println("Your card was added in Humo database,successfully ")
+			fmt.Println(humoMap)
+		} else {
+			othersBanksMap[input] = "Other Bank"
+			fmt.Println("Your card was added in our Other-bank database,successfully ")
+			fmt.Println(othersBanksMap)
+
+		}
 
 	}
 }
